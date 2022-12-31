@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+
+    <script src="https://kit.fontawesome.com/d234b7fa74.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        if (!localStorage.getItem('storage')) {
+            let baseStorage = {
+                "Task List": [{ text: "Task 1", done: false }, { text: "Task 2", done: false }],
+            }
+            localStorage.setItem('storage', JSON.stringify(baseStorage));
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <!-- <h1 class="title">Notes App</h1> -->
+        <img src="https://see.fontimg.com/api/renderfont4/w1xrZ/eyJyIjoiZnMiLCJoIjo4MSwidyI6MTI1MCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Tm90ZXMgQXBw/moonshine-personal-use-regular.png"
+            alt="" />
+    </div>
+
+    <section>
+        <div class="cards" id="cards">
+            <!-- <div class="card">
+                <div class="cardTitle">
+                    <h2>Entertainment</h2>
+                </div>
+                <div class="tasks">
+                    <ul>
+                        <li class="lis">
+                            <span>could be anything 1
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash"></i>
+                            </span>
+                        </li>
+                        <li class="lis">
+                            <span>could be anything 2 <i class="fas fa-trash"></i></span>
+                        </li>
+                        <li class="lis">
+                            <span>could be anything 3 <i class="fas fa-trash"></i></span>
+                        </li>
+                        <li class="lis">
+                            <span>could be anything 4 <i class="fas fa-trash"></i></span>
+                        </li>
+                        <li class="lis">
+                            <span>could be anything 5 <i class="fas fa-trash"></i></span>
+                        </li>
+                    </ul>
+                    <button class="newTask">Add Task</button>
+                    <button class="deleteList">Delete List</button>
+                </div>
+            </div> -->
+
+            <!-- <div class="card">
+                <div class="cardTitle">
+                    <h2>Studies</h2>
+                </div>
+                <div class="tasks">
+                    <ul>
+                        <li class="lis">
+                            <span data-key="Studies">Random Task 1 <i class="fas fa-trash"
+                                    data-key="Studies"></i></span>
+                        </li>
+                        <li class="lis">
+                            <span>Random Task 2 <i class="fas fa-trash"></i></span>
+                        </li>
+                        <li class="lis">
+                            <span>Random Task 3 <i class="fas fa-trash"></i></span>
+                        </li>
+                        <li class="lis">
+                            <span>Random Task 4 <i class="fas fa-trash"></i></span>
+                        </li>
+                        <li class="lis">
+                            <span>Random Task 5 <i class="fas fa-trash"></i></span>
+                        </li>
+                    </ul>
+                    <button class="newTask" data-key="Studies">Add Task</button>
+                    <button class="deleteList" data-key="Studies">Delete List</button>
+                </div>
+            </div> -->
+        </div>
+
+        <i class="fas fa-plus"></i>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
